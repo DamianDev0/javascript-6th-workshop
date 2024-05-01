@@ -1,0 +1,63 @@
+
+
+
+// function seleccionarHabitacion(rooms) {
+//     const userInput = prompt(
+//       "Ingrese el numero de habitacion a reservar: " +
+//         rooms
+//           .map((room) => {
+//             return `\nRoom Number: ${room.number}`;
+//           })
+//           .join(", ")
+//     );
+//     const selectedRoom = rooms.find((room) => room.number === userInput);
+//     if (!selectedRoom) {
+//       const continueInput = prompt("¿Desea continuar? (s/n): ");
+//       if (continueInput.toLowerCase() === "s") {
+//         return seleccionarHabitacion(rooms);
+//       } else {
+//         console.log("Proceso de selección de habitación cancelado.");
+//         return null;
+//       }
+//     }
+//     return selectedRoom;
+//   }
+
+
+// // Función para crear una reserva
+// function crearReserva(room) {
+//   const id = generarId();
+//   const fechaInicio = prompt("Ingrese la fecha de inicio (YYYY-MM-DD): ");
+//   const fechaFin = prompt("Ingrese la fecha de fin (YYYY-MM-DD): ");
+//   const huesped = prompt("Ingrese el número de huéspedes: ");
+//   const reserva = {
+//     id,
+//     room,
+//     fechaInicio,
+//     fechaFin,
+//     huesped,
+//   };
+//   reservas.push(reserva);
+//   console.log("Reserva creada:", reserva);
+// }
+
+// // Función para generar un generador de IDs único
+// function generarGeneradorId() {
+//   let id = 1;
+//   return function () {
+//     return id++;
+//   };
+// }
+
+// // Inicializar generador de IDs
+// const generarId = generarGeneradorId();
+
+// // Lógica principal
+// cargarYMostrarData()
+//   .then(({ rooms }) => {
+//     const selectedRoom = seleccionarHabitacion(rooms);
+//     crearReserva(selectedRoom);
+//   })
+//   .catch((error) => {
+//     console.error("Error al manejar la promesa:", error);
+//   });
